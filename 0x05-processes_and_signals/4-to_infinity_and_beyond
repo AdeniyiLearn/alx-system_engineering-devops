@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Displays to infinity and beyond
-process="4-to_infinity_and_beyond"
-p_id=$(pgrep -f "$process")
-kill "$p_id"
+process="4 to infinity and beyond"
+while :
+do
+	echo "$process"
+	sleep 2
+done
