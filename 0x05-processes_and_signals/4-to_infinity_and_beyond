@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays to infinity and beyond
-process="4 to infinity and beyond"
+process="To infinity and beyond"
 while :
 do
 	echo "$process"
