@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays the PID, along with process name, of process
+# whose name contain the bash word
+pgrep bash -l
