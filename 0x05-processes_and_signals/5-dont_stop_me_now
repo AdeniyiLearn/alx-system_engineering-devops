@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Kills 4-to_infinity_and_beyond
+
+proc="4-to_infinity_and_beyond"
+proc_id=$(pgrep -f "$proc")
+
+kill "$proc_id"
