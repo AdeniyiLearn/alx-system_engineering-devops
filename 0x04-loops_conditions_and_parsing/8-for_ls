@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-# Displays Best School 10 times
-DISP=$(find ./*-* --  *-* | cut -d'-' -f2-)
+# Displays the files in the current directory.
 
-for i in $DISP; do
-	echo "$i"
+for i in *
+do
+	if [ -f "$i" ] && [ "$i" != "README.md" ]
+	then
+		echo "$i" | cut -d '-' -f2-
+	fi
 done
