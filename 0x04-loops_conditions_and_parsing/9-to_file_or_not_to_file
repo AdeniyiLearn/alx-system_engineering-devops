@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Provide information about the school file.
+# if it exists: school file exists
+# if doesn't exist: school file does not exist
+# If it exists, print:
+# if it is empty: school file is empty
+# if it is not empty: school file is not empty
+
+
+files=$(find . -type f | wc -l)
+
+read=0
+
+for i in *
+do
+	read=$((read + 1))
+	if [ -e "$i" ] && [ "$i" == "school" ]
+	then
+		echo "school file exists"
+		if [ -s "$i" ]
+		then
+			echo "school file is not empty"
+		else
+			echo "school file is empty"
+		fi
+		if [ -f "$i" ]
+		then
+			echo "school is a regular file"
+		fi
+		exit 0
+	elif [ $read -eq "$files" ]
+	then
+		echo "school file does not exist"
+		exit 0
+	fi
+done
