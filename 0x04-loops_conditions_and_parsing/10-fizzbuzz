@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# show numbers from 1 to 100.
+# Output FizzBuzz when the number is a multiple of 3 and 5
+# Output Fizz when the number is multiple of 3
+# Output Buzz when the number is a multiple of 5
+# Otherwise, output the number In a list format
+
+count=1
+while [ $count -le 100 ]
+do
+	if [ $((count % 5)) -eq 0 ] && [ $((count % 3)) -eq 0 ]
+	then
+		echo "FizzBuzz"
+	elif [ $((count % 5)) -eq 0 ]
+	then
+		echo "Buzz"
+	elif [ $((count % 3)) -eq 0 ]
+	then
+		echo "Fizz"
+	else
+		echo "$count"
+	fi
+	count=$((count + 1))
+done
